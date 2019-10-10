@@ -1,0 +1,220 @@
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Owin.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+D:\College Work\Application Development\Semester 2\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Owin.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Prashant\Documents\Visual Studio 2015\Projects\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Owin.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Google.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+D:\College Work\Application Development\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb

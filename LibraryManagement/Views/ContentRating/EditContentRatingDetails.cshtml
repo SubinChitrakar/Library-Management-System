@@ -1,0 +1,53 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.Models.ContentRatingModel
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Content Rating";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "ContentRating";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+@using (Html.BeginForm("EditContentRatingDetails", "ContentRating", FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Update Content Rating</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.EditorFor(model => model.ContentRatingId, new { htmlAttributes = new { @class = "form-control", Type = "hidden" } })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ContentRatingName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ContentRatingName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ContentRatingName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-success" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="color:green">
+                @ViewBag.Message
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,88 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.ViewModels.BookInfo> 
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation!=3)
+    {
+        ViewBag.Title = "Dashboard";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Dashboard";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+    
+}
+
+<link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
+<link href="@Url.Content("~/Content/css/jquery.dataTables.min.css")" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row" style="background-color: rgba(222, 222, 222, 0.6); ">
+        <div class="col-md-2" style="margin-top: 3.2%;">
+
+            <a style="text-decoration: none;" href="@Url.Action("AddBook","Book")"><button class="btn btn-block btn-success" style="margin-top: 2%; color: white; font-weight: bold;">Add New Book</button></a>
+
+            <a style="text-decoration: none;" href="@Url.Action("GetAllAuthorDetails","Author")"><button class="btn btn-block btn-warning" style="margin-top: 2%; font-weight: bold;">View Author List</button></a>
+
+            <a style="text-decoration: none;" href="@Url.Action("GetAllPublicationDetails","Publication")"><button class="btn btn-block btn-warning" style="margin-top: 2%; font-weight: bold;">View Publication List </button></a>
+    
+            <a style="text-decoration: none;" href="@Url.Action("CheckOldBooks","Copies")"><button class="btn btn-block btn-warning" style="margin-top: 2%; font-weight: bold;">List of Old Books</button></a>
+            
+            <a style="text-decoration: none;" href="@Url.Action("InactiveUser","Member")"><button class="btn btn-block btn-warning" style="margin-top: 2%; font-weight: bold;">Inactive Users</button></a>
+        
+            <a style="text-decoration: none;" href="@Url.Action("BooksNotLoaned","Book")"><button class="btn btn-block btn-warning" style="margin-top: 2%; font-weight: bold;">Books Not Loaned</button></a>
+        </div>
+
+        <div class="col-md-10">
+            <div class="dashtable" style="padding: 1%;">
+                <table id="bookTable" class="display table table-striped" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th><h4 style="color: white; text-shadow: 2px 2px black; text-align: center;">Book Details</h4></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var book in Model)
+                    { 
+                        <tr>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <a href="@Url.Action("GetBook", "Book", new {id = book.BookID})">
+                                                        <h3 style="font-family: 'Luckiest Guy', cursive; text-align: left; margin-top: auto; margin-bottom: 1%; color: black; text-shadow: 2px 2px beige;">@Html.DisplayFor(modelItem => book.BookName)</h3></a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <b>Author: </b>@Html.DisplayFor(modelItem => book.AuthorName)
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <b>Publication: </b>@Html.DisplayFor(modelItem => book.PublicationName)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a style="text-decoration: none;" href="@Url.Action("AddCopies", "Copies", new {id = book.BookID})" ><button class="btn btn-block btn-default" style="margin-top: 2%; color: darkred; font-weight: bold;">Add Stock</button></a>
+                                            <a style="text-decoration: none;" href="@Url.Action("GetCopiesofBook", "Copies", new { id = book.BookID })"><button class="btn btn-block btn-default" style="margin-top: 2%; color: darkred; font-weight: bold;">Loan Book</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<LibraryManagement.Models.LogModel>
+@{
+    ViewBag.Title = "Log Detail";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Log</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    @foreach (var log in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => log.Username) &nbsp; @Html.DisplayFor(model => log.Activity) &nbsp;From&nbsp; @Html.DisplayFor(model => log.TableName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => log.LogDate)
+                            </td>
+                            
+                        </tr>
+
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

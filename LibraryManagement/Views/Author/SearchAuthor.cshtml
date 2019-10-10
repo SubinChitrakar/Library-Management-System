@@ -1,0 +1,64 @@
+﻿@model IEnumerable<LibraryManagement.ViewModels.SearchandUser>
+@{
+    Layout = null;
+}
+<!DOCTYPE HTML5>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Library Mgmt System</title>
+
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/style_form.css")" rel="stylesheet">
+
+    <link href="@Url.Content("~/Content/images/icon/titleicon.ico")" rel="shortcut icon">
+
+</head>
+<body class="img-responsive" style="background-image:url(../../Content/images/background3.jpg)">
+    <section>
+        <div class="container" style="background-color: rgba(222, 222, 222, 0.6); padding: 2%;">
+            <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+            <h4 style="text-align: center;">Search Author</h4>
+            <div class="row" style="margin-bottom: 1%;">
+                <div class="col-md-12">
+                    <table class="table">
+                        <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                            <th>Book Name</th>
+                            <th>Author Name</th>
+                            <th>Publication Name</th>
+                            <th>Rack No</th>
+                            <th>No Of Copies</th>
+                        </tr>
+                        @foreach (var authorDetails in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => authorDetails.BookName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => authorDetails.AuthorName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => authorDetails.PublicationName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => authorDetails.RackNo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => authorDetails.Quantity)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/scripts.js")"></script>
+</body>
+</html>

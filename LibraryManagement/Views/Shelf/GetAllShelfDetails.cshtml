@@ -1,0 +1,58 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.Models.ShelfModel>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Shelf";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Shelf";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Shelf</h4>
+            </div>
+            <div class="col-md-2">
+                <a href="@Url.Action("AddShelf","Shelf")"><button class="btn btn-sm btn-success" style="float: right; font-weight: bold;">Add New Shelf</button></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                        <th>Shelf ID</th>
+                        <th>Rack Number</th>
+                        <th></th>
+                    </tr>
+
+                        @foreach (var shelf in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => shelf.ShelfId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => shelf.RackNo)
+                                </td>
+                                <td style="text-align: right;">
+                                    @Html.ActionLink("Edit", "EditShelfDetails", new { id = shelf.ShelfId }) |
+                                    @Html.ActionLink("Delete", "DeleteShelf", new { id = shelf.ShelfId }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                                </td>
+                            </tr>
+
+                        }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

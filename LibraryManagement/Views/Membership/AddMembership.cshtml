@@ -1,0 +1,60 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.Models.MembershipModel
+
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Membership";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Membership";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<div class="content" style="background-color: rgba(222, 222, 222, 0.6); padding: 2%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <a href="@Url.Action("GetAllMembershipDetails", "Membership")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                        <h4 class="title" style="text-align: center;">Add Membership</h4>
+                        <hr/>
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="container-fluid">
+                        <div class="content">
+                            @using (Html.BeginForm("AddMembership", "Membership", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.MembershipCategory)
+                                        @Html.EditorFor(model => model.MembershipCategory, new { htmlAttributes = new { @class = "form-control", @placeholder = "Membership Category" } })
+                                        @Html.ValidationMessageFor(model => model.MembershipCategory, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.NoOfBooks)
+                                        @Html.EditorFor(model => model.NoOfBooks, new { htmlAttributes = new { @class = "form-control", @placeholder = "No. of Books" } })
+                                        @Html.ValidationMessageFor(model => model.NoOfBooks, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <input class="btn btn-success btn-fill pull-right" type="submit" value="Add Membership" name="AddMembership" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/assets/js/jquery-1.10.2.js"></script>

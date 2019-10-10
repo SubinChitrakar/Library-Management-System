@@ -1,0 +1,43 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.ViewModels.BookLoaned
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background: white; padding: 1%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+
+                <b>Book Name: </b>@Html.DisplayFor(modelItem => Model.BookName)<br />
+
+                <b>Member Name: </b>@Html.DisplayFor(modelItem => Model.MemberName)<br />
+                
+                <b>Loaned Dated: </b>@Html.DisplayFor(modelItem => Model.LoanDate)<br />
+                
+                <b>Returned Date: </b>@Html.DisplayFor(modelItem => Model.ReturnDate)<br />
+                
+                <b>Actual Return Date: </b>@Html.DisplayFor(modelItem => Model.ActualReturnDate)<br />
+                
+                <b>Charge: </b>@Html.DisplayFor(modelItem => Model.Charge)<br />
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

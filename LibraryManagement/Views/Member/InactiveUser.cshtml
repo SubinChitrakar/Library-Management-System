@@ -1,0 +1,58 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.Models.MemberModel>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "User";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "User";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Inactive Members</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                        <th>Member Name</th>
+                        <th>Date of Birth</th>
+                        <th>Phone No</th>
+                        <th>Email</th>
+                    </tr>
+
+                    @foreach (var member in Model)
+                    {
+                        @Html.HiddenFor(model => member.MemberId)
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.MemberName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.Dob)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.PhoneNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.Email)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

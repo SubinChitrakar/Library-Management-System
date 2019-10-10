@@ -1,0 +1,81 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.ViewModels.BookDetails
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.7); padding-left: 5%; padding-top: 5%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-10">
+                @Html.HiddenFor(model => Model.BookModel.BookId)
+
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Book Name : </b>
+                    </div>
+                    <div class="col-md-9">
+                        <h1 style="text-align: left;">@Html.DisplayFor(modelItem => Model.BookModel.BookName)</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Published Date : </b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">@Html.DisplayFor(modelItem => Model.BookModel.PublishedDate)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Edition : </b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">@Html.DisplayFor(modelItem => Model.BookModel.Edition)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Publication Name :</b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">@Html.DisplayFor(modelItem => Model.PublicationModel.PublicationName)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Content Rating : </b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">@Html.DisplayFor(modelItem => Model.ContentRatingModel.ContentRatingName)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Genre : </b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">@Html.DisplayFor(modelItem => Model.BookModel.Genre)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="font-size: 150%; text-align: right;"><b>Author : </b>
+                    </div>
+                    <div class="col-md-9" style="font-size: 150%; text-align: left;">
+                        @Html.DisplayFor(modelItem => Model.AuthorInfo1.AuthorName)<br/>
+                        @Html.DisplayFor(modelItem => Model.AuthorInfo2.AuthorName)<br/>
+                        @Html.DisplayFor(modelItem => Model.AuthorInfo3.AuthorName)<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default btn-lg">@Html.ActionLink("Delete", "DeleteBooks", new {id = Model.BookModel.BookId}, new {onclick = "return confirm('Are sure wants to delete?');"})</button>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+

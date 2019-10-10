@@ -1,0 +1,80 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.ViewModels.MemberWithMembership>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Member";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Member";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Member</h4>
+            </div>
+        <div class="col-md-2">
+            <a href="@Url.Action("AddMember", "Member")"><button class="btn btn-sm btn-block btn-success" style="float: right; font-weight: bold; margin-bottom: 1%;">Add New Member</button></a>    
+            <a href="@Url.Action("GetAllMembershipDetails", "Membership")"><button class="btn btn-sm btn-block btn-success" style="float: right; font-weight: bold; margin-bottom: 2%;">Add New Membership</button></a>
+        </div>
+
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="panel-332145">
+                <table class="table">
+                    <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                        <th>Member Name</th>
+                        <th>Date of Birth</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Membership Type</th>
+                        <th>No of Book Allowed</th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var member in Model)
+                    {
+                        @Html.HiddenFor(model => member.MemberID)
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => member.MemberName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.DOB)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.PhoneNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.MembershipType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => member.NoOfBooks)
+                            </td>
+                            <td style="text-align: right;">
+                                @Html.ActionLink("Edit", "EditMemberDetails", new { id = member.MemberID }) |
+                                @Html.ActionLink("Delete", "DeleteMember", new { id = member.MemberID }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                            </td>
+                        </tr>
+
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

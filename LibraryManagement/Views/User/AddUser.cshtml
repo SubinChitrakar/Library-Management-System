@@ -1,0 +1,58 @@
+﻿@model LibraryManagement.Models.UserModel
+@{
+    ViewBag.Title = "User Management";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+@using (Html.BeginForm("AddUser","User",FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="background-color: rgba(222, 222, 222, 0.6); padding: 2%;">
+        <a href="@Url.Action("GetAllUserDetails", "User")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+        <h4 style="text-align: center;">Add Employee</h4>
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.UserName, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new {htmlAttributes = new {@class = "form-control", @Type = "Password"}})
+                @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuthenticationId, "Authentication Type", htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10" style="margin-top: 0.5%;">
+                @Html.DropDownListFor(model => model.AuthenticationId, new SelectList(Model.AuthenticationList, "AuthenticationID", "AuthenticationName"), "Select Membership Type")
+                @Html.ValidationMessageFor(model => model.AuthenticationId, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="float: right; font-weight: bold;"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="color: green">
+                @ViewBag.Message
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>  

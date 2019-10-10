@@ -1,0 +1,60 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.ViewModels.BookLoaned>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.7); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("GetAllLoan", "Loan")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Loan</h4>
+            </div>
+            <div style="clear: both; margin-bottom: 1%"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                            <th>Book Name</th>
+                            <th>Member Name</th>
+                            <th>Loaned Date</th>
+                            <th>Return Date</th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var loan in Model)
+                        {   @Html.HiddenFor(modelItem => loan.LoanID)
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => loan.BookName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => loan.MemberName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => loan.LoanDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => loan.ReturnDate)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+</section>

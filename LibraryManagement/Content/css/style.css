@@ -1,0 +1,31 @@
+section{
+	padding-top: 10%;
+}
+
+#logo{
+	display: block;
+	margin: auto;
+		margin-top: 15%;
+		margin-bottom: 15%;
+}
+
+#modal-681699{
+	display: block;
+	margin: auto;
+	text-align: middle;
+	width: 70%;
+}
+
+#buttonSearch{
+	display: block;
+	margin: auto;
+	margin-top: 10%;
+	text-align: middle;
+	width: 70%;
+}
+
+img{
+	display: block;
+	margin: auto;
+}
+

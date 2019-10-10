@@ -1,0 +1,54 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.Models.AuthorModel>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Author";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Author";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">Authors List</h4>
+            </div>
+            <div class="col-md-2">
+                <a href="@Url.Action("AddAuthor","Author")"><button class="btn btn-sm btn-success" style="float: right; font-weight: bold;">+ Add New Author</button></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                        <th>Author Name</th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var author in Model)
+                    {
+                        @Html.HiddenFor(model => author.AuthorId)
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => author.AuthorName)
+                            </td>
+                            <td style="text-align: right;">
+                                @Html.ActionLink("Edit", "EditAuthorDetails", new { id = author.AuthorId }) |
+                                @Html.ActionLink("Delete", "DeleteAuthor", new { id = author.AuthorId }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                            </td>
+                        </tr>
+                    }
+                </table>
+                </div>
+        </div>
+    </div>
+</section>
+

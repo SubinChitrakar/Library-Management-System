@@ -1,0 +1,238 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.ViewModels.BookDetails
+
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row" style="background-color: rgba(222, 222, 222, 0.5); padding-top: 1%;">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                        <h4 class="title" style="color: white; text-shadow: 2px 2px black; text-align: center;">Add Book</h4>
+                    </div>
+                   
+                            <a id="modal-681699" href="#authorModal" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false" style="text-decoration: none; float: right;">
+                                <button class="btn btn-block btn-success">New Author</button>
+                            </a>
+                  
+                         
+                            <a id="modal-681701" href="#publicationModal" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false" style="text-decoration: none; float: right; margin-right: 0.5%;">
+                                <button class="btn btn-block btn-success">New Publication</button>
+                            </a>
+                       
+                        
+                            <a id="modal-681700" href="#contentRatingModal" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false" style="text-decoration: none; float: right; margin-right: 0.5%;">
+                                <button class="btn btn-block btn-success">New Content Rating</button>
+                            </a>
+                      
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal fade" id="authorModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding-bottom: 5%;">
+                                            <h4 style="float: left; color: black; text-shadow: 0px 0px black;">Add Author</h4><button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        @using (Html.BeginForm("AddAuthorFromBooks", "Author", FormMethod.Post))
+                                        {
+
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.TempAuthor.AuthorName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Author Name"}})
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-success">Add New Author</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal fade" id="publicationModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding-bottom: 5%;">
+                                            <h4 style="float: left; color: black; text-shadow: 0px 0px black;">Add Publication</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                        </div>
+                                        @using (Html.BeginForm("AddPublicationFromBooks", "Publication", FormMethod.Post))
+                                        {
+
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.TempPublication.PublicationName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Publication Name"}})
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-success">Add New Publication</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal fade" id="contentRatingModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding-bottom: 5%;">
+                                            <h4 style="float: left; color: black; text-shadow: 0px 0px black;">Add New Content Rating</h4><button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                        </div>
+                                        @using (Html.BeginForm("AddContentRatingFromBooks", "ContentRating", FormMethod.Post))
+                                        {
+
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.TempContentRating.ContentRatingName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Content Rating Name"}})
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-success">Add New Content Rating</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+
+                    <div class="container-fluid">
+                        <div class="content">
+                            @using (Html.BeginForm("AddBook", "Book", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row" style="margin-top: 2%;">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right; margin-top: 0.6%;">Title :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.EditorFor(model => model.BookModel.BookName, new {htmlAttributes = new {@class = "form-control", @placeholder = "Title"}})
+                                                    @Html.ValidationMessageFor(model => model.BookModel.BookName, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right; margin-top: 0.6%;">Publish Date :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.EditorFor(model => model.BookModel.PublishedDate, new {htmlAttributes = new {@class = "form-control", @placeholder = "Published Date", Type = "Date"}})
+                                                    @Html.ValidationMessageFor(model => model.BookModel.PublishedDate, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right; margin-top: 0.6%;">Edition :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.EditorFor(model => model.BookModel.Edition, new {htmlAttributes = new {@class = "form-control", @placeholder = "Edition"}})
+                                                    @Html.ValidationMessageFor(model => model.BookModel.Edition, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right;">Content Rating :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.DropDownListFor(model => model.BookModel.ContentRatingId, new SelectList(Model.BookModel.ContentRatingList, "ContentRatingId", "ContentRatingName"), "Select Content Rating")
+                                                    @Html.ValidationMessageFor(model => model.BookModel.ContentRatingList, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right;">Book Type :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.DropDownListFor(model => model.BookModel.BookType, new SelectList(Model.BookModel.BookTypeList, "BookType"), "Select Book Type")
+                                                    @Html.ValidationMessageFor(model => model.BookModel.BookType, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right;">Publication :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.DropDownListFor(model => model.BookModel.PublicationId, new SelectList(Model.BookModel.PublicationList, "PublicationId", "PublicationName"), "Select Publication")
+                                                    @Html.ValidationMessageFor(model => model.BookModel.BookType, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right; margin-top: 0.6%;">Genre :</label>
+                                                <div class="col-sm-10">
+                                                    @Html.EditorFor(model => model.BookModel.Genre, new {htmlAttributes = new {@class = "form-control", @placeholder = "Genre"}})
+                                                    @Html.ValidationMessageFor(model => model.BookModel.Genre, "", new {@class = "text-danger"})
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="control-label col-sm-2" style="text-align: right;">Author :</label>
+                                                <div class="col-sm-3">
+                                                    @Html.DropDownListFor(model => model.Author1, new SelectList(Model.AuthorList, "AuthorId", "AuthorName"), "Select a Author")
+                                                    @Html.ValidationMessageFor(model => model.Author1, "", new {@class = "text-danger"})
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    @Html.DropDownListFor(model => model.Author2, new SelectList(Model.AuthorList, "AuthorId", "AuthorName"), "Select a Author")
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    @Html.DropDownListFor(model => model.Author3, new SelectList(Model.AuthorList, "AuthorId", "AuthorName"), "Select a Author")
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input class="btn btn-primary btn-fill pull-right" type="submit" value="+ Add A Book" name="AddBook" style="font-weight: bold;"/>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<script src="~/Content/assets/js/jquery-1.10.2.js"></script>

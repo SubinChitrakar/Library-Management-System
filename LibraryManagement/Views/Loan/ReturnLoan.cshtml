@@ -1,0 +1,57 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.Models.LoanModel
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<div class="content" style="background-color: rgba(222, 222, 222, 0.7); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <a href="@Url.Action("GetAllLoan", "Loan")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                        <h4 class="title" style="text-align: center;">Return Book</h4>
+                        <hr/>
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="container-fluid">
+                        <div>
+                            @ViewBag.Message
+                        </div>
+                        <div class="content">
+                            @using (Html.BeginForm("ReturnLoan", "Loan", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    @Html.HiddenFor(model => Model.LoanId)
+                                    <div class="form-group">
+                                        <label>Return Date :</label>
+                                        @Html.EditorFor(model => model.ActualReturnDate, new {htmlAttributes = new {@class = "form-control", @placeholder = "Actual Return Date", Type = "Date"}})
+                                        @Html.ValidationMessageFor(model => model.ActualReturnDate, "", new {@class = "text-danger"})
+                                    </div>
+
+                                    <input class="btn btn-success btn-fill pull-right" type="submit" value="Return Loan" name="ReturnLoan" style="float: right;"/>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/assets/js/jquery-1.10.2.js"></script>

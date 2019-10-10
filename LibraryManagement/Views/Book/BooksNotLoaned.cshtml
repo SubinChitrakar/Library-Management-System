@@ -1,0 +1,70 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.Models.BookModel>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Book";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background-color: rgba(222, 222, 222, 0.8); padding: 1%;">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-md-10">
+                <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                <h4 style="text-align: center;">View Inactive Members</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr style="background-color: rgba(55, 15, 15, 0.8); color: white; font-weight: bold;">
+                        <th>Book Name</th>
+                        <th>Published Date</th>
+                        <th>Content Rating ID</th>
+                        <th>Edition</th>
+                        <th>PublicationID</th>
+                        <th>Book Type</th>
+                        <th>Genre</th>
+                    </tr>
+
+                    @foreach (var book in Model)
+                    {
+                        @Html.HiddenFor(model => book.BookId)
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.BookName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.PublishedDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.ContentRatingId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.Edition)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.PublicationId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.BookType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => book.Genre)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

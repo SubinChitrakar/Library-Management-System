@@ -1,0 +1,52 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.Models.ContentRatingModel
+
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Content Rating";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "ContentRating";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Add Content Rating</h4>
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="container-fluid">
+                        <div class="content">
+                            @using (Html.BeginForm("AddContentRating", "ContentRating", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ContentRatingName)
+                                        @Html.EditorFor(model => model.ContentRatingName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Content Rating" } })
+                                        @Html.ValidationMessageFor(model => model.ContentRatingName, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <input class="btn btn-info btn-fill pull-right" type="submit" value="Add Content Rating" name="AddContentRating" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/assets/js/jquery-1.10.2.js"></script>

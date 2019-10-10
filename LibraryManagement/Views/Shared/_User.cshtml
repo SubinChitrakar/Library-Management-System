@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>@ViewBag.Title</title>
+
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/style_form.css")" rel="stylesheet">
+
+    <link href="@Url.Content("~/Content/images/icon/titleicon.ico")" rel="shortcut icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
+</head>
+<!--Body with background-->
+<body class="img-responsive" style="background-image: url(@Url.Content("~/Content/images/background3.jpg"));">
+        
+@Html.Partial("_OtherNavigation")
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_Footer")
+
+<script src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+<script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+<script src="@Url.Content("~/Content/js/dataTables.bootstrap.min.js")"></script>
+<script src="@Url.Content("~/Content/js/jquery.dataTables.min.js")"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        $('#bookTable').DataTable();
+            
+    });
+</script>
+
+<script src="@Url.Content("~/Content/js/scripts.js")"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿@using System.Web.UI.WebControls
+@model LibraryManagement.ViewModels.SearchandUser
+@{
+    Layout = null;
+}
+<!DOCTYPE HTML5>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Library Mgmt System</title>
+
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
+
+    <link href="@Url.Content("~/Content/images/icon/titleicon.ico")" rel="shortcut icon">
+
+</head>
+<body class="img-responsive" style="background-image:url(../../Content/images/background3.jpg)">
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="carousel slide" id="carousel-525613">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel-525613">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-525613">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-525613">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="Carousel shelf" src="@Url.Content("~/Content/images/shelves.png")" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img alt="Carousel books" src="@Url.Content("~/Content/images/books.png")" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img alt="Carousel quote" src="@Url.Content("~/Content/images/book2.png")" class="img-responsive">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-525613" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#carousel-525613" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="row logo1">
+                    <div id="logo" class="col-md-12">
+                        <img alt="Library Management System Logo" src="@Url.Content("~/Content/images/logo.png")">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a id="modal-681699" href="#modal-container-681699" role="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false">Click Here To Sign In</a>
+
+                        <div class="modal fade" id="modal-container-681699" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            ×
+                                        </button>
+                                        <h4 class="text-center" class="modal-title" id="myModalLabel"></h4>
+                                        <div id="logo_modal">
+                                            <img alt="Library Management System Logo" src="@Url.Content("~/Content/images/logo.png")">
+                                        </div>
+                                    </div>
+                                    @using (Html.BeginForm("VerifyUser", "Home", FormMethod.Post))
+                                    {
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                @Html.EditorFor(model => model.User.UserName, new { htmlAttributes = new { @class = "form-control", PlaceHolder="Username"} })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.EditorFor(model => model.User.Password, new { htmlAttributes = new { @class = "form-control",PlaceHolder="Password",Type="password"} })
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-success">Sign In</button>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <a id="buttonSearch" href="#modal-container-681670" role="button" class="btn btn-danger btn-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false">Search a Book</a>
+
+                        <div class="modal fade" id="modal-container-681670" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            ×
+                                        </button>
+                                        <h4 class="text-center" class="modal-title" id="myModalLabel"></h4>
+                                        <div id="logo_modal">
+                                            <img alt="Library Management System Logo" src="@Url.Content("~/Content/images/logo.png")">
+                                        </div>
+                                    </div>
+                                    @using (Html.BeginForm("SearchBook", "Book", FormMethod.Post))
+                                    {
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Book.BookName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Search By Book Name"}})
+                                                </div>
+                                                <div class ="col-md-4">
+                                                    <button type="submit" class="btn btn-success">Search</button>
+                                                    <button type="reset" class="btn btn-warning">Clear</button>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    }
+                                    @using (Html.BeginForm("SearchPublication", "Publication", FormMethod.Post))
+                                    {
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Publication.PublicationName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Search By Publication"}})
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-success">Search</button>
+                                                    <button type="reset" class="btn btn-warning">Clear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    @using (Html.BeginForm("SearchAuthor", "Author", FormMethod.Post))
+                                    {
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Author.AuthorName, new {htmlAttributes = new {@class = "form-control", PlaceHolder = "Search By Author"}})
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-success">Search</button>
+                                                    <button type="reset" class="btn btn-warning">Clear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    <div class="modal-footer">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+<script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+<script src="@Url.Content("~/Content/js/scripts.js")"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿@using LibraryManagement.Models
+@model IEnumerable<LibraryManagement.Models.ContentRatingModel>
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Content Rating";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "ContentRating";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<section style="background: white; padding: 1%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="tabbable" id="tabs-326305">
+                    <a href="@Url.Action("AddContentRating","ContentRating")"><button>Add New Content Rating</button></a>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#panel-332145" data-toggle="tab"><h4>View Author</h4></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-332145">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Publication Name
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var contentRating in Model)
+                                {
+                                    @Html.HiddenFor(model => contentRating.ContentRatingId)
+                                    <tr>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => contentRating.ContentRatingName)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "EditContentRatingDetails", new { id = contentRating.ContentRatingId }) |
+                                            @Html.ActionLink("Delete", "DeleteContentRating", new { id = contentRating.ContentRatingId }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                                        </td>
+                                    </tr>
+
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+</section>
+

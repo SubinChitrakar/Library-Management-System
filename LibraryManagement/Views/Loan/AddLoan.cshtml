@@ -1,0 +1,76 @@
+﻿@using LibraryManagement.Models
+@model LibraryManagement.Models.LoanModel
+@{
+    var profileData = Session["UserProfile"] as UserSession;
+    if (profileData.Designation != 3)
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_Master.cshtml";
+    }
+    else
+    {
+        ViewBag.Title = "Loan";
+        Layout = "~/Views/Shared/_User.cshtml";
+    }
+}
+
+<div class="content" style="background-color: rgba(222, 222, 222, 0.6); padding: 2%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <a href="@Url.Action("Dashboard", "Home")"><button class="btn btn-sm" style="float: left;"><span class="glyphicon glyphicon-chevron-left"></span>Back</button></a>
+                        <h4 class="title" style="text-align: center;">Add Loan</h4>
+                        <hr/>
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="container-fluid">
+                        <div>
+                            <div class="alert alert danger">
+                            @ViewBag.Message
+                            </div>
+                        </div>
+                        <div class="content">
+                            @using (Html.BeginForm("AddLoan", "Loan", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    @Html.HiddenFor(model => Model.CopiesId)
+                                    <div class="form-group">
+                                        <div class="col-md-2" style="text-align: right; margin-top: 0.6%;">
+                                            <label>Loan Date :</label>
+                                        </div>
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.LoanDate, new {htmlAttributes = new {@class = "form-control", @placeholder = "Loan Date", Type = "Date"}})
+                                            @Html.ValidationMessageFor(model => model.LoanDate, "", new {@class = "text-danger"})
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-2" style="text-align: right; margin-top: 0.6%;">
+                                            <label>Membership Type</label>
+                                        </div>
+                                        <div class="col-md-10" style="margin-top: 1%;">
+                                            @Html.DropDownListFor(model => model.MembershipId, new SelectList(Model.MemberList, "MemberID", "MemberName"), "Select Member")
+                                            @Html.ValidationMessageFor(model => model.MembershipId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10" style="float: right;">
+                                            <input class="btn btn-success btn-fill pull-right" type="submit" value="Add Loan" name="AddLoan" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/assets/js/jquery-1.10.2.js"></script>

@@ -1,0 +1,37 @@
+section{
+	padding-top: 5%;
+}
+
+.logo{
+	display: block;
+	margin: auto;
+	margin-top: 2%;
+}
+
+
+
+img{
+	display: block;
+	margin: auto;
+}
+
+
+.view_area{
+	background-color: rgba(25, 2, 2, .3);
+}
+
+.btn{
+	text-transform: uppercase;
+	margin-top: 5%;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px black;
+}
+
+h3{
+	color: white;
+}
+
+
+footer{
+   margin-top: 5%; 
+   }
